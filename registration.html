@@ -15,6 +15,11 @@
 <body>
     <div id="main">
         <section class="wrapper">
+            <div class="towers">
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+            </div>
             <header>
                 <a class="logo" href='./index.html'>
                     <img src="./images/logo.png" alt="Asymmetry Logo">
@@ -27,31 +32,25 @@
                 <div class="image-wrapper">
                     <img src="./images/pic1.jpg" alt="Registration">
                 </div>
-                <form action="./result.html" method="get">
+                <form action="./result.html">
 
-                    <div>
-                      <label for="name">First name:</label>
-                      <input type="text" id="name" name="first_name">
+                    <div class="form-wrapp">
+                      <input type="text" id="name" name="first_name" placeholder="First name" required>
 
-                      <label for="name">Last name:</label>
-                      <input type="text" id="last-name" name="last_name">
+                      <input type="text" id="last-name" name="last_name" placeholder="Last name" required>
                     
-                      <label for="email">Email address:</label>
-                      <input type="email" id="mail" name="user_email">
+                      <input type="email" id="mail" name="user_email" placeholder="Email address" required>
                    
-                      <label for="name">Address:</label>
-                      <input type="text" id="address" name="user_address">
+                      <input type="text" id="address" name="user_address" placeholder="Address" required>
 
-                      <label for="name">Phone:</label>
-                      <input type="number" id="phone" name="user_phone">
+                      <input type="number" id="phone" name="user_phone" placeholder="Phone">
 
-                      <label for="name">Postal Code:</label>
-                      <input type="number" id="postal" name="user_postal">
+                      <input type="number" id="postal" name="user_postal" placeholder="Postal Code" required>
                     </div>
     
-                    <div>
-                      <input type="checkbox" id="therms_of_service" value="therms_of_service" name="therms_of_service"><label class="green" for="therms_of_service">I have read and accept <strong>Therms of service</strong></label><br>
-                      <input type="checkbox" id="privacy_policy" value="tprivacy_policy" name="privacy_policy"><label class="green" for="privacy_policy">I have read and accept <strong>Privacy policy</strong></label><br>
+                    <div class="checkboxes">
+                      <input type="checkbox" id="therms_of_service" value="therms_of_service" name="therms_of_service" required><label class="green" for="therms_of_service">I have read and accept <strong>Therms of service</strong></label><br>
+                      <input type="checkbox" id="privacy_policy" value="tprivacy_policy" name="privacy_policy" required><label class="green" for="privacy_policy">I have read and accept <strong>Privacy policy</strong></label><br>
                       <input type="checkbox" id="email-news" value="email-news" name="email-news"><label class="green" for="email-news">I would like to receive news by e-mail.</label>
                     </div>  
 

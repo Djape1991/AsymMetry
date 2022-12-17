@@ -45,13 +45,70 @@ li {
 }
 
 #main .wrapper {
-    background-color: hwb(0 95% 5% / 0.75);
+    background-color: rgba(242, 242, 242, 0.749);
     width: 60vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
+}
+
+#main .wrapper .towers {
+    position: absolute;
+    left: -60px;
+    bottom: 0;
+    height: 100%;
+    width: 120px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#main .wrapper .towers .two {
+    height: 75%;
+    width: 40px;
+    background-color: #008e99;
+    display: block;
+    position: relative;
+}
+
+#main .wrapper .towers .two:after {
+    content: '';
+    border-top: 45px solid transparent;
+    border-left: 40px solid #008e99;
+}
+
+#main .wrapper .towers .one {
+    height: 48%;
+    width: 40px;
+    background-color: rgba(0, 143, 153, 0.65);
+    display: block;
+    position: relative;
+}
+
+#main .wrapper .towers .one:after {
+    content: '';
+    border-top: 45px solid transparent;
+    border-right: 40px solid rgba(0, 143, 153, 0.65);
+    top: -44px;
+    position: relative;
+}
+
+#main .wrapper .towers .three {
+    height: 60%;
+    width: 40px;
+    background-color: rgba(0, 143, 153, 0.65);
+    display: block;
+    position: relative;
+}
+
+#main .wrapper .towers .three:after {
+    content: '';
+    border-top: 45px solid transparent;
+    border-left: 40px solid rgba(0, 143, 153, 0.65);
+    top: -44px;
     position: relative;
 }
 
@@ -124,15 +181,18 @@ li {
     -o-transition: all 0.3s ease-in-out;
 }
 
-#main .wrapper .content .button a {
+#main .wrapper .content .button a,
+button {
     background-color: #008e99;
     color: #fff;
     padding: 15px 5vw;
     display: block;
     text-decoration: none;
+    border: 0;
 }
 
-#main .wrapper .content .button a:hover {
+#main .wrapper .content .button a:hover,
+button:hover {
     background-color: #333333;
 }
 
@@ -214,6 +274,103 @@ li {
 
 /* Game Memory End */
 
+.social,
+.questions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-top: 50px;
+}
+
+.questions {
+    flex-direction: column;
+    width: 100%;
+}
+
+.social li {
+    margin: 0;
+}
+
+.questions li {
+    margin: 0;
+    width: 80%;
+    height: 100px;
+    background-color: #008e99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.questions li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.social li:not(:last-child) {
+    margin-right: 15%;
+}
+
+.social li a {
+    color: #fff;
+    background-color: #008e99;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.social li a:hover {
+    background-color: #333333;
+}
+
+.form-wrapp {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 50px 0 20px;
+    gap: 10px;
+}
+
+.form-wrapp input {
+    width: 31%;
+    height: 56px;
+    border: 2px solid #008e99;
+    background: transparent;
+    padding: 0;
+}
+
+.form-wrapp input::placeholder {
+    color: #333333;
+    font-family: Poppins;
+    font-weight: normal;
+    font-size: 20px;
+    padding: 0 15px;
+}
+
+.checkboxes {
+    text-align: left;
+}
+
+.checkboxes input {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    position: relative;
+    bottom: -3px;
+}
+
+.checkboxes label {
+    font-size: 20px;
+}
+
+
 @media only screen and (max-width: 1240px) {
     #main .wrapper .content .button a {
         padding: 15px 75px;
@@ -229,6 +386,42 @@ li {
 }
 
 @media only screen and (max-width: 746px) {
+    .form-wrapp input {
+        width: 100%;
+        text-align: center;
+    }
+    .questions li {
+        width: 90%;
+        text-align: center;
+    }
+    .social li:not(:last-child) {
+        margin-right: 5%;
+    }
+    #main .wrapper .towers {
+        position: absolute;
+        left: -40px;
+        bottom: 0;
+        height: 100%;
+        width: 60px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    #main .wrapper .towers .two,
+    #main .wrapper .towers .one {
+        width: 20px;
+    }
+    #main .wrapper .towers .two:after {
+        border-top: 30px solid transparent;
+        border-left: 20px solid #008e99;
+    }
+    #main .wrapper .towers .one:after {
+        border-top: 30px solid transparent;
+        border-right: 20px solid rgba(0, 143, 153, 0.65);
+    }
+    #main .wrapper .towers .three {
+        display: none;
+    }
     #main .wrapper {
         width: 90vw;
     }
@@ -294,5 +487,12 @@ li {
 
     #game-memory h1 {
         font-size: 30px;
+    }
+    .social {
+        flex-wrap: wrap;
+
+    }
+    .social li {
+        margin: 10px;
     }
 }
