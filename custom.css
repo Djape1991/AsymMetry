@@ -1,0 +1,298 @@
+/* Zelena - #008e99
+Siva - #333333
+Bela - #f2f2f2 */
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Poppins';
+    font-weight: normal;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p,
+a,
+li {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+#main {
+    background-image: url(./images/background-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 30px;
+}
+
+#main .wrapper {
+    background-color: hwb(0 95% 5% / 0.75);
+    width: 60vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#main .wrapper header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+}
+
+#main .wrapper .content {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 40px;
+}
+
+#main .wrapper footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    font-size: 30px;
+}
+
+.copyright {
+    padding: 0 10px;
+}
+
+#main .wrapper .image-wrapper {
+    padding: 20px;
+    background: #fff;
+    display: flex;
+    width: 80%;
+}
+
+#main .wrapper .image-wrapper img,
+#main .wrapper header .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+#main .wrapper .content h1 {
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+#main .wrapper .content p {
+    margin-bottom: 60px;
+}
+
+#main .wrapper .content .text-under {
+    margin-top: 60px;
+}
+
+#main .wrapper .content .button {
+    margin-top: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#main .wrapper .content .button a {
+    background-color: #008e99;
+    color: #fff;
+    padding: 15px 5vw;
+    display: block;
+    text-decoration: none;
+}
+
+#main .wrapper .content .button a:hover {
+    background-color: #333333;
+}
+
+#main .wrapper .content .text-under p {
+    margin: 0;
+}
+
+/* Games Start */
+
+#main .wrapper .content#game-start h1,
+#main .wrapper .content#game-memory h1 {
+    text-transform: none;
+}
+
+/* Games Start End */
+
+/* Games Memory */
+
+#game-memory .grid {
+    max-width: 1099px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-memory .card {
+    position: relative;
+    transition: all .4s linear;
+    transform-style: preserve-3d;
+    margin: 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+#game-memory .card:hover {
+    border: 1px solid #008e99;
+}
+
+#game-memory .card,
+#game-memory .back,
+#game-memory .front {
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#game-memory .back,
+#game-memory .front {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+#game-memory .front {
+    z-index: 2;
+    background-image: url(./images/kartica\ memory.png);
+}
+
+#game-memory .back {
+    transform: rotateY(180deg);
+    background-color: #6589F9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#game-memory .selected {
+    transform: rotateY(180deg);
+}
+
+#game-memory .match .front {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* Game Memory End */
+
+@media only screen and (max-width: 1240px) {
+    #main .wrapper .content .button a {
+        padding: 15px 75px;
+    }
+
+    #main .wrapper {
+        width: 80vw;
+    }
+
+    #main .wrapper footer {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 746px) {
+    #main .wrapper {
+        width: 90vw;
+    }
+
+    #main {
+        background-image: url(./images/background-mob.jpg);
+    }
+
+    #main .wrapper .content {
+        padding: 10px 20px;
+    }
+
+    #main .wrapper .content p {
+        margin-bottom: 30px;
+    }
+
+    #main .wrapper .content .text-under {
+        margin-top: 30px;
+    }
+
+    #main .wrapper .content .button {
+        margin-top: 40px;
+    }
+
+    #main .wrapper .content h1 {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    #main .wrapper footer {
+        font-size: 16px;
+    }
+
+    #main .wrapper .image-wrapper {
+        padding: 10px;
+    }
+
+    p,
+    a,
+    li {
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    #game-memory .card, 
+    #game-memory .back, 
+    #game-memory .front {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    #game-memory .card, 
+    #game-memory .back, 
+    #game-memory .front {
+        height: 100px;
+        width: 100px;
+    }
+
+    #game-memory h1 {
+        font-size: 30px;
+    }
+}
